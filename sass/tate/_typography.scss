@@ -10,6 +10,7 @@ html {
   line-height: $base-line-height;
   /* 約物の調整 */
   text-spacing: space-first allow-end ideograph-alpha ideograph-numeric;
+  font-feature-settings: "locl";
 }
 
 h1 {
