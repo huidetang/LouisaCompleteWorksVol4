@@ -22,7 +22,5 @@ titlefile: title.xhtml
 colophon: colophon.xhtml
 
 # 著者紹介は自作したXMTMLファイルを使う
-profile: profile.xhtml
-profiletitle: 著者紹介
-
-debug: true
+# profile: profile.xhtml
+# profiletitle: 著者紹介
