@@ -94,7 +94,7 @@ jobs:
       - name: 成果物のアップロード
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ format('inokashira-template_{0}_{1}_{2}', 'epub', env.MUKI, steps.date.outputs.date) }}
+          name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'epub', env.MUKI, steps.date.outputs.date) }}
           path: book.epub
 
   print-pdf:
@@ -139,7 +139,7 @@ jobs:
       - name: 成果物のアップロード
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ format('inokashira-template_{0}_{1}_{2}', 'print-pdf', env.MUKI, steps.date.outputs.date) }}
+          name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'print-pdf', env.MUKI, steps.date.outputs.date) }}
           path: book.pdf
 
   print-pdf-no-bleed:
@@ -184,7 +184,7 @@ jobs:
       - name: 成果物のアップロード
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ format('inokashira-template_{0}_{1}_{2}', 'print-pdf-no-bleed', env.MUKI, steps.date.outputs.date) }}
+          name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'print-pdf-no-bleed', env.MUKI, steps.date.outputs.date) }}
           path: book.pdf
 
   ebook-pdf:
@@ -217,7 +217,7 @@ jobs:
       - name: 成果物のアップロード
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ format('inokashira-template_{0}_{1}_{2}', 'ebook-pdf', env.MUKI, steps.date.outputs.date) }}
+          name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'ebook-pdf', env.MUKI, steps.date.outputs.date) }}
           path: book.pdf
 
   udonbook:
@@ -252,7 +252,7 @@ jobs:
       - name: 成果物のアップロード
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ format('inokashira-template_{0}_{1}_{2}', 'udonbook-png', env.MUKI, steps.date.outputs.date) }}
+          name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'udonbook-png', env.MUKI, steps.date.outputs.date) }}
           path: ./distimages/*.png
 
   # paper:
@@ -304,6 +304,6 @@ jobs:
   #     - name: 成果物のアップロード
   #       uses: actions/upload-artifact@v4
   #       with:
-  #         name: ${{ format('inokashira-template_{0}_{1}_{2}', 'print-pdf', env.MUKI, steps.date.outputs.date) }}
+  #         name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'print-pdf', env.MUKI, steps.date.outputs.date) }}
   #         path: book.pdf
 

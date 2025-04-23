@@ -2,7 +2,7 @@
 
 html {
   /* フォント */
-  font-family: "Alegreya", "Yakumono", "Noto Serif CJK jp", "Cica", serif;
+  font-family: "Alegreya", "Yakumono", "IPAMincho", "Cica", serif;
   font-weight: normal;
   /* 行末揃え */
   text-align: justify;
@@ -10,7 +10,6 @@ html {
   line-height: $base-line-height;
   /* 約物の調整 */
   text-spacing: space-first allow-end ideograph-alpha ideograph-numeric;
-  font-feature-settings: "locl";
 }
 
 h1 {
@@ -24,7 +23,6 @@ h1 {
   break-after: avoid;
   // 3行取り
   line-height: $base-line-height * 3;
-  font-feature-settings: "locl";
 }
 h1.short {
   // タイトルが短い場合のスタイル
@@ -48,7 +46,6 @@ h2 {
   break-after: avoid;
   // 2行取り
   line-height: $base-line-height * 2;
-  font-feature-settings: "locl";
 }
 
 h1 + h2 {
@@ -77,7 +74,6 @@ p {
   text-indent: 1em;
   /* 段落先頭約物の調整、行末句読点ぶら下げあり */
   hanging-punctuation: first allow-end;
-  font-feature-settings: "locl";
 
   &.noindent {
     text-indent: 0;
