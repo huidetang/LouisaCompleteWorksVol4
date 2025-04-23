@@ -1,14 +1,15 @@
 @charset "UTF-8";
 
-@import '../common/contents-common';
+@use '../common/contents-common';
+@use "../variable/a6-tate-no-bleed";
 
 /* 画像＋キャプション */
 div.image {
   width: 100%;
   display: flex;
   flex-flow: column;
-  max-width: $content-width;
-  max-height: $content-height;
+  max-width: a6-tate-no-bleed.$content-width;
+  max-height: a6-tate-no-bleed.$content-height;
   box-sizing: border-box;
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
@@ -18,8 +19,8 @@ div.image {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    max-width: $content-width;
-    max-height: $content-height;
+    max-width: a6-tate-no-bleed.$content-width;
+    max-height: a6-tate-no-bleed.$content-height;
   }
 
   & > p.caption {
