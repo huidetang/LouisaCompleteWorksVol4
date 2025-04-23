@@ -3,7 +3,7 @@
 inherit: ["config.yml"]
 
 # 印刷所の名前を設定する
-prt: ねこのしっぽ
+prt: 太陽出版
 
 # 縦書き
 direction: "rtl"
