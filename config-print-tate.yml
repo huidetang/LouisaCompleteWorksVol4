@@ -3,16 +3,16 @@
 inherit: ["config.yml"]
 
 # 印刷所の名前を設定する
-prt: ○○印刷所
+prt: ねこのしっぽ
 
 # 縦書き
 direction: "rtl"
 
-# 表紙と裏表紙は作らない
-cover: false
+# 大扉を表紙の代わりにする
+cover: title.xhtml
 
-# 大扉は画像で作る
-titlefile: title.xhtml
+# システム上の大扉は作らない
+titlepage: false
 
 # 奥付は自作したXMTMLファイルを使う
 colophon: colophon.xhtml

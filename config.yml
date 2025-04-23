@@ -59,7 +59,6 @@ aut: ["るいざ・しゃーろっと"]
 # a-pbl, pbl: 出版社（発行所） ※ サークル名はここに設定するとよい
 a-pbl: 井の頭文芸部
 # a-prt, prt: 印刷所 ※ 印刷所は config-print.yml で指定する。
-a-prt: ねこのしっぽ
 # a-red, red: 項目の枠組起草者
 # a-rev, rev: 評論者
 # a-spn, spn: 援助者
