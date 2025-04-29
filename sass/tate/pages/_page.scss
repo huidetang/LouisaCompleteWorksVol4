@@ -1,24 +1,24 @@
-@use "../../variable/a6-tate";
+@use "../../variable/a6-tate-no-bleed";
 
 @charset "UTF-8";
 
 @page {
-    size: a6-tate.$paper-size;
-    bleed: a6-tate.$bleed-size;
+    size: a6-tate-no-bleed.$paper-size;
+    bleed: a6-tate-no-bleed.$bleed-size;
     // 行送り * 行数
-    width: a6-tate.$content-width;
+    width: a6-tate-no-bleed.$content-width;
     // フォントサイズ * 文字数
-    height: a6-tate.$content-height;
+    height: a6-tate-no-bleed.$content-height;
     // margin: auto;
-    margin-top: a6-tate.$ten;
-    margin-bottom: a6-tate.$chi;
-    marks: a6-tate.$marks;
+    margin-top: a6-tate-no-bleed.$ten;
+    margin-bottom: a6-tate-no-bleed.$chi;
+    marks: a6-tate-no-bleed.$marks;
 }
 
 @page :left {
 
-    margin-right: a6-tate.$nodo;
-    margin-left: a6-tate.$koguchi;
+    margin-right: a6-tate-no-bleed.$nodo;
+    margin-left: a6-tate-no-bleed.$koguchi;
   
     @top-left {
         /* 左上ノンブル、柱（タイトル文字列） */
@@ -47,8 +47,8 @@
 
 @page :right {
 
-    margin-left: a6-tate.$nodo;
-    margin-right: a6-tate.$koguchi;
+    margin-left: a6-tate-no-bleed.$nodo;
+    margin-right: a6-tate-no-bleed.$koguchi;
   
     @top-right {
         /* 右上ノンブル、柱（出版物タイトル文字列） */
