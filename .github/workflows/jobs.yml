@@ -63,39 +63,39 @@ jobs:
   #         npx textlint -f checkstyle chapter/*.re wiki/*.md README.md \
   #         | reviewdog -f=checkstyle -name="textlint" -diff="git diff ${{ github.event.pull_request.base.ref }}" -reporter=github-pr-review -level="error"
 
-  # epub:
-  #   # needs: reviewdog-github-check
-  #   name: EPUB版組
-  #   runs-on: ubuntu-latest
-  #   container:
-  #     image: ghcr.io/huideyeren/vivliostyle-review-docker:latest
-  #   steps:
-  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-  #     - name: リポジトリのチェックアウト
-  #       uses: actions/checkout@v4
-  #     - name: 現在時刻を取得
-  #       env: 
-  #         TZ: "Asia/Tokyo" # タイムゾーンを指定
-  #       id: date
-  #       run: echo "::set-output name=date::$(date +'%Y-%m-%d_%H%M')"
-  #            # '%Y-%m-%d %H:%M'の部分を書き換えれば、任意の表示に変更できる。
-  #     - name: 現在時刻を確認
-  #       run: echo ${{ steps.date.outputs.date }} # 2022-01-03 10:42
-  #     - name: Node.jsのパッケージをインストール
-  #       run: pnpm install
-  #     - name: SCSSのコンパイル
-  #       run: pnpm run style:${{ env.SIZE }}-${{ env.MUKI }}-no-bleed
-  #     - name: Rubyのパッケージをインストール
-  #       run: bundle install
-  #     - name: Playwrightのインストール
-  #       run: ./node_modules/.bin/playwright install --with-deps
-  #     - name: EPUBの生成
-  #       run: REVIEW_CONFIG_FILE=config-epub-${{ env.MUKI }}.yml bundle exec rake epub
-  #     - name: 成果物のアップロード
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'epub', env.MUKI, steps.date.outputs.date) }}
-  #         path: book.epub
+  epub:
+    # needs: reviewdog-github-check
+    name: EPUB版組
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/huideyeren/vivliostyle-review-docker:latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: リポジトリのチェックアウト
+        uses: actions/checkout@v4
+      - name: 現在時刻を取得
+        env: 
+          TZ: "Asia/Tokyo" # タイムゾーンを指定
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d_%H%M')"
+             # '%Y-%m-%d %H:%M'の部分を書き換えれば、任意の表示に変更できる。
+      - name: 現在時刻を確認
+        run: echo ${{ steps.date.outputs.date }} # 2022-01-03 10:42
+      - name: Node.jsのパッケージをインストール
+        run: pnpm install
+      - name: SCSSのコンパイル
+        run: pnpm run style:${{ env.SIZE }}-${{ env.MUKI }}-no-bleed
+      - name: Rubyのパッケージをインストール
+        run: bundle install
+      - name: Playwrightのインストール
+        run: ./node_modules/.bin/playwright install --with-deps
+      - name: EPUBの生成
+        run: REVIEW_CONFIG_FILE=config-epub-${{ env.MUKI }}.yml bundle exec rake epub
+      - name: 成果物のアップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ format('るいざ第4集_{0}_{1}_{2}', 'epub', env.MUKI, steps.date.outputs.date) }}
+          path: book.epub
 
   # print-pdf:
   #   # needs: reviewdog-github-check
@@ -240,7 +240,7 @@ jobs:
       - name: Node.jsのパッケージをインストール
         run: pnpm install
       - name: SCSSのコンパイル
-        run: pnpm run style:${{ env.SIZE }}-${{ env.MUKI }}-no-bleed
+        run: pnpm run style:${{ env.SIZE }}-${{ env.MUKI }}-udonbook
       - name: Rubyのパッケージをインストール
         run: bundle install
       - name: Playwrightのインストール

@@ -14,6 +14,7 @@
     "style:a5-tate-no-bleed": "sass ./sass/vivliostyle-a5-tate-no-bleed.scss style.css",
     "style:a4-tate-no-bleed": "sass ./sass/vivliostyle-a4-tate-no-bleed.scss style.css",
     "style:a6-tate-no-bleed": "sass ./sass/vivliostyle-a6-tate-no-bleed.scss style.css",
+    "style:a6-tate-udonbook": "sass ./sass/vivliostyle-a6-tate-udonbook.scss style.css",
     "style:b5-tate-no-bleed": "sass ./sass/vivliostyle-b5-tate-no-bleed.scss style.css",
     "style:shinsho-tate-no-bleed": "sass ./sass/vivliostyle-shinsho-tate-no-bleed.scss style.css",
     "style:a5-yoko": "sass ./sass/vivliostyle-a5-yoko.scss style.css",
